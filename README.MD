@@ -10,3 +10,35 @@
 3. Внутри цикла проверим длину текущего цикла, Если длина <=3, то добавим строку в новый массив.
 4. После завершения цикла выведим новый массив строк
 ```
+## Написание программы на C#
+
+```
+string[] inputArray = new string[] { "Hello", "2", "world", ":-)" }; 
+        
+        int count = 0;
+        for (int i = 0; i < inputArray.Length; i++)
+        {
+            if (inputArray[i].Length <= 3)
+            {
+                count++;
+            }
+        }
+
+        string[] resultArray = new string[count];
+        int index = 0;
+        for (int i = 0; i < inputArray.Length; i++)
+        {
+            if (inputArray[i].Length <= 3)
+            {
+                resultArray[index] = inputArray[i];
+                index++;
+            }
+        }
+
+        
+        Console.WriteLine("Результат:");
+        for (int i = 0; i < resultArray.Length; i++)
+        {
+            Console.Write(resultArray[i] + " ");
+        }
+
